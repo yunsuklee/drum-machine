@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+#drum-machine {
+  width: 600px;
+  height: 300px;
+  border: 3px solid #2d2727;
+  border-radius: 10px;
+  background-color: #2d2727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Russo One;
+  -webkit-box-shadow: -3px -3px 3px #150b0b;
+          box-shadow: -3px -3px 3px #150b0b;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+#drum {
+  width: 56%;
+  height: 94%;
+  padding-top: 7px;
+  padding-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #423d3d;
+  -webkit-box-shadow: 3px 3px #150b0b inset;
+          box-shadow: 3px 3px #150b0b inset;
+  border-radius: 10px;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+@media screen and (max-width: 700px) {
+  #drum-machine {
+    height: 600px;
+    width: 300px;
+    -webkit-transition: 150ms;
+    transition: 150ms;
+  }
+  #drum {
+    width: 96%;
+    height: 45%;
+    margin-right: 3px;
+    margin-top: 3px;
+    -webkit-box-shadow: 3px 3px #150b0b;
+            box-shadow: 3px 3px #150b0b;
+    -webkit-transition: 150ms;
+    transition: 150ms;
+  }
+}
+
+.drum-pad {
+  width: 95px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #150b0b;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.heater {
+  border: 3px solid #D26A6C;
+  -webkit-box-shadow: -3px -3px 3px #D26A6C;
+          box-shadow: -3px -3px 3px #D26A6C;
+  color: #D26A6C;
+}
+
+.clap {
+  border: 3px solid #a0d26a;
+  -webkit-box-shadow: -3px -3px 3px #a0d26a;
+          box-shadow: -3px -3px 3px #a0d26a;
+  color: #a0d26a;
+}
+
+.hh {
+  border: 3px solid #9c6ad2;
+  -webkit-box-shadow: -3px -3px 3px #9c6ad2;
+          box-shadow: -3px -3px 3px #9c6ad2;
+  color: #9c6ad2;
+}
+
+.kick {
+  border: 3px solid #6ad2d0;
+  -webkit-box-shadow: -3px -3px 3px #6ad2d0;
+          box-shadow: -3px -3px 3px #6ad2d0;
+  color: #6ad2d0;
+}
+
+.drum-pad:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+@media screen and (max-width: 700px) {
+  .drum-pad {
+    width: 75px;
+    height: 65px;
+    -webkit-transition: 150ms;
+    transition: 150ms;
+  }
+}
+
+#drum-config {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+#drum-config #power-button, #drum-config #bank-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 60px;
+}
+
+#drum-config .button-title {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#drum-config .button-container {
+  width: 50px;
+  height: 25px;
+  background-color: #423d3d;
+  padding: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: -3px -3px 3px #150b0b inset;
+          box-shadow: -3px -3px 3px #150b0b inset;
+}
+
+#drum-config .button-container .button {
+  width: 23px;
+  height: 21px;
+  background-color: #c0bebe;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-box-shadow: -3px -3px 3px #150b0b;
+          box-shadow: -3px -3px 3px #150b0b;
+}
+
+#drum-config #display {
+  width: 60%;
+  height: 50px;
+  background-color: #423d3d;
+  color: black;
+  border-radius: 2px;
+  border: 1px solid #150b0b;
+  -webkit-box-shadow: 0 0 3px #150b0b inset;
+          box-shadow: 0 0 3px #150b0b inset;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 0.8rem;
+}
+
+#drum-config #volume {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 15px 0;
+}
+
+#drum-config #volume #volume-range {
+  width: 80%;
+  height: 5px;
+  cursor: pointer;
+  background: #150b0b;
+  border: solid 1px #150b0b;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+#drum-config #volume input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #c0bebe;
+  height: 30px;
+  width: 15px;
+  border-radius: 2px;
+  -webkit-box-shadow: -2px -2px 3px #150b0b;
+          box-shadow: -2px -2px 3px #150b0b;
+}
+
+@media screen and (max-width: 700px) {
+  #drum-config {
+    width: 100%;
+    height: 55%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
