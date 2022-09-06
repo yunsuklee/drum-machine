@@ -1,0 +1,43 @@
+.drum-pad {
+  width: 95px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer; 
+  background-color: map-get($map: $drum-pad-color, $key: "black");
+  transition: 150ms;
+}
+.heater {
+  border: 3px solid map-get($map: $drum-pad-color, $key: "red");
+  box-shadow: -3px -3px 3px map-get($map: $drum-pad-color, $key: "red");
+  color: map-get($map: $drum-pad-color, $key: "red");
+}
+.clap {
+  border: 3px solid map-get($map: $drum-pad-color, $key: "green");
+  box-shadow: -3px -3px 3px map-get($map: $drum-pad-color, $key: "green");
+  color: map-get($map: $drum-pad-color, $key: "green");
+}
+.hh {
+  border: 3px solid map-get($map: $drum-pad-color, $key: "purple");
+  box-shadow: -3px -3px 3px map-get($map: $drum-pad-color, $key: "purple");
+  color: map-get($map: $drum-pad-color, $key: "purple");
+}
+.kick {
+  border: 3px solid map-get($map: $drum-pad-color, $key: "blue");
+  box-shadow: -3px -3px 3px map-get($map: $drum-pad-color, $key: "blue");
+  color: map-get($map: $drum-pad-color, $key: "blue");;
+}
+.drum-pad:hover {
+  transform: scale(1.05);
+  transition: 100ms;
+}
+
+@media screen and (max-width: 700px) {
+  .drum-pad {
+    width: 75px;
+    height: 65px;
+    transition: 150ms;
+  }
+}

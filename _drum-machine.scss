@@ -1,0 +1,51 @@
+#root {
+  background-color: #001d16;
+}
+
+#drum-machine {
+  width: 600px;
+  height: 300px;
+  border: $drum-border;
+  border-radius: 10px;
+  background-color: $drum-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;  
+  font-family: Russo One;
+  box-shadow: -3px -3px 3px $shadow-color;
+  transition: 150ms;
+}
+
+#drum {
+  width: 56%;
+  height: 94%;
+  padding-top: 7px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $display-color;
+  box-shadow: 3px 3px $shadow-color inset;
+  border-radius: 10px;
+  transition: 150ms;
+}
+
+@media screen and (max-width: 700px) {
+  #drum-machine {
+    height: 600px;
+    width: 300px;
+    transition: 150ms;
+  }
+  #drum {
+    width: 96%;
+    height: 45%;
+    margin-right: 3px;
+    margin-top: 3px;
+    box-shadow: 3px 3px $shadow-color;
+    transition: 150ms;
+  }
+}

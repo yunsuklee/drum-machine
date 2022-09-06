@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'drum-machine';
+@import 'drum-pads';
+@import 'drum-config';
+
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
