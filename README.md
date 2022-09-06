@@ -11,5 +11,5 @@ The drum contains several pads which you can activate either by clicking or by k
 Here's the link to the working app:
 https://codepen.io/yunsuklee/pen/VwxLRpw
 
-![Screenshot from 2022-09-06 18-04-45](https://user-images.githubusercontent.com/92840840/188683451-7e7b956e-a931-4e8b-a0bf-6bcbd996741f.png)
-![Screenshot from 2022-09-06 18-04-49](https://user-images.githubusercontent.com/92840840/188683455-e8f212c5-e5a4-48ff-9ea3-7caaf113c8a9.png)
+![Screenshot from 2022-09-06 22-17-46](https://user-images.githubusercontent.com/92840840/188730398-ded3b06e-d88b-4848-a0e3-24792cd9f432.png)
+![Screenshot from 2022-09-06 22-17-51](https://user-images.githubusercontent.com/92840840/188730405-d3870fee-b2a1-45cf-a614-9145ebe4248f.png)
