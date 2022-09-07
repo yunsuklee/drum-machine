@@ -7,7 +7,12 @@
   align-items: center;
   color: $text-color;
 
-  #power-button, #bank-button {
+  .button-title {
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #power-button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -15,19 +20,24 @@
     justify-content: space-evenly;
     height: 60px;
   }
-  .button-title {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
   .button-container {
     width: 50px;
     height: 25px;
-    background-color: $button-container-color;
+    background: linear-gradient(to right, #001d16, $button-container-color 90%);
     padding: 2px;
     border-radius: 2px;
     box-shadow: -3px -3px 3px $shadow-color inset;
 
+    p {
+      width: 50px;
+      line-height: 20px;
+      vertical-align: middle;
+      font-size: 0.6rem;
+      padding: 0 1px 0 3px;
+      word-spacing: 3px;
+      position: absolute;
+      z-index: 1;
+    }
     .button {
       width: 23px;
       height: 21px;
@@ -35,6 +45,43 @@
       cursor: pointer;
       border-radius: 2px;
       box-shadow: -3px -3px 3px $shadow-color;
+      position: relative;
+      z-index: 10;
+    }
+  }
+  #bank-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    height: 18%;
+
+    fieldset {
+      width: 56px;
+      height: 26px;
+      background-color: $button-container-color;
+      padding: 2px;
+      border-radius: 2px;
+      box-shadow: -3px -3px 3px $shadow-color inset;
+
+      input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 23px;
+        height: 21px;
+        border-radius: 2px;
+        cursor: pointer;
+        background: $buttons-color;
+        box-shadow: -3px -3px 3px $shadow-color;
+      }
+      input[type="radio"]:first-child {
+        margin-right: 5px;
+      }
+      input[type="radio"]:checked {
+        box-shadow: -3px -3px 3px $shadow-color inset;
+      }
     }
   }
 
@@ -42,7 +89,7 @@
     width: 60%;
     height: 50px;
     background-color: $display-color;
-    color: black;
+    color: #ABABAB;
     border-radius: 2px;
     border: 1px solid $shadow-color;
     box-shadow: 0 0 3px $shadow-color inset;
@@ -54,10 +101,17 @@
   #volume {
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 0 15px 0;
+    margin: 5% 0 5% 0;
+
+    label {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 0.6rem;
+      font-weight: bold;
+      margin-bottom: 9%;
+    }
 
     #volume-range {
       width: 80%;

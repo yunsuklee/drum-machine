@@ -27,7 +27,7 @@ class DrumPad extends React.Component {
 
   render() {
     return(
-      <div 
+      <button 
         className={this.props.class}
         id={this.props.clipId}
         onClick={this.playSound}
@@ -39,7 +39,7 @@ class DrumPad extends React.Component {
           id={this.props.keyTrigger}
           src={this.props.clip}
         />
-      </div>
+      </button>
     );
   }
 }
@@ -69,40 +69,42 @@ class App extends React.Component {
     power: 'right',
     display: '',
     volume: 50,
-    bank: 'left',
     currentPadBank: bankOne
   };
+
+  componentDidMount() {
+    let defaultBank = document.getElementById("bank1");
+    defaultBank.checked = true;
+  }
 
   handleClick = (event) => {
     event.preventDefault();
 
-    if (event.target.id === 'power') {
-      if (this.state.power === 'right') {
-        this.setState({
-          power: 'left',
-        });
-        this.updateDisplay('off');
-      } else {
-        this.setState({
-          power: 'right',
-          display: 'on',
-          volume: this.state.volume
-        });
-      }
-    } else if (event.target.id === 'bank') {
-      if (this.state.bank === 'right') {
-        this.setState({
-          bank: 'left',
-          currentPadBank: bankOne
-        });
-        this.updateDisplay('Heater Kit');
-      } else {
-        this.setState({
-          bank: 'right',
-          currentPadBank: bankTwo
-        });
-        this.updateDisplay('Smooth Piano Kit');
-      }
+    if (this.state.power === 'right') {
+      this.setState({
+        power: 'left',
+      });
+      this.updateDisplay('off');
+    } else {
+      this.setState({
+        power: 'right',
+        display: 'on',
+        volume: this.state.volume
+      });
+      setTimeout(() => { this.clearDisplay() }, 1000);
+    }
+  }
+  handleBank = (event) => {
+    if (event.target.id === 'bank1') {
+      this.setState({
+        currentPadBank: bankOne
+      });
+      this.updateDisplay('Heater Kit');
+    } else {
+      this.setState({
+        currentPadBank: bankTwo
+      });
+      this.updateDisplay('Smooth Piano Kit');
     }
   }
   handleVolume = (event) => {
@@ -113,7 +115,7 @@ class App extends React.Component {
     });
     setTimeout(() => {
       this.updateDisplay('Volume: ' + this.state.volume);
-    }, 50);
+    }, 0);
   }
   updateDisplay = (displayUpdate) => {
     if (this.state.power === 'right') {
@@ -150,11 +152,13 @@ class App extends React.Component {
                 onClick={this.handleClick}
                 style={{ float: this.state.power }}
               />
+              <p>ON OFF</p>
             </div>
           </div>
           <div id="display">{this.state.display}</div>
           <div id="volume">
             <input
+              label="volume"
               id="volume-range"
               max="100"
               min="0"
@@ -165,14 +169,22 @@ class App extends React.Component {
           </div>
           <div id="bank-button">
             <h3 className="button-title">BANK</h3>
-            <div className="button-container">
-              <div
-                id="bank"
-                className="button"
-                onClick={this.handleClick}
-                style={{ float: this.state.bank }}
+            <fieldset>
+              <input
+                id="bank1"
+                label="bank1"
+                name="bank"
+                type="radio"
+                onClick={this.handleBank}
               />
-            </div>
+              <input
+                id="bank2"
+                label="bank2"
+                name="bank"
+                type="radio"
+                onClick={this.handleBank}
+              />
+            </fieldset>
           </div>
         </div>
       </div>
